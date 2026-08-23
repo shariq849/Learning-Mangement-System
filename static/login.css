@@ -1,0 +1,135 @@
+body {
+    background: linear-gradient(180deg,
+            #1e3a8a 0%,
+            #f8fafc 30%,
+            #ffffff 65%,
+            #1e3a8a 100%);
+    margin: 50px;
+    text-align: center;
+}
+
+.section1 {
+    border: 5px solid rgb(17, 18, 17);
+    flex: 1;
+    background-color: white;
+    box-shadow: 2px 2px 2px 2px;
+}
+
+* {
+    border-radius: 20px;
+}
+
+.section2 {
+    border: 5px solid rgb(17, 18, 17);
+    flex: 1;
+    background-color: #0d6efd;
+    color: white;
+    font-size: 2vw;
+    margin-left: 5px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 120px;
+}
+
+main {
+    display: flex;
+}
+
+h1 {
+    text-align: center;
+}
+
+input {
+    font-size: 2vw;
+    margin: 45px;
+    height: 45px;
+    border: 5px groove black;
+}
+
+button {
+    background-color: chocolate;
+    font-size: 2vw;
+    border: 5px solid black;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+button:active {
+    transform: scale(1.1);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+label {
+    text-align: right;
+    width: 100px;
+    margin-right: 20px;
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width:600px) {
+    body {
+        margin: 20px;
+
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .section1,
+    .section2 {
+        margin: 0px;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        vertical-align: middle;
+    }
+
+    .section2 {
+        margin-top: 5px;
+
+    }
+
+    input {
+        height: auto;
+        font-size: 15px;
+        margin: 5px;
+    }
+
+    label {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:250px) {
+    input {
+        margin: 2px;
+    }
+
+    .section2 {
+        padding-top: 15px;
+        margin-top: 25px;
+    }
+
+    button {
+        font-size: 15px;
+    }
+
+    .section1,
+    .section2 {
+        margin: 0px;
+        width: 100%;
+        height: auto;
+        font-size: 10px;
+    }
+
+    input {
+        font-size: 15px;
+        width: 100px;
+    }
+}

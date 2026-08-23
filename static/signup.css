@@ -1,0 +1,64 @@
+body {
+    margin: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.check {
+    width: 25px;
+    height: 25px;
+}
+
+.form-check-label {
+    font-size: 20px;
+    padding-left: 5px;
+}
+
+.form-label {
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    font-size: 20px;
+}
+
+.form-select {
+    font-size: 20px;
+}
+
+#stuForm,
+#InsForm {
+    margin-top: 50px;
+}
+
+.Form {
+    position: relative;
+    animation: mymove 2s ease;
+}
+
+h2 {
+    position: relative;
+    animation: mymove 0.5s ease-in;
+    text-align: center;
+    background-color: rgb(55, 198, 23);
+}
+
+header {
+    border: 5px solid black;
+    margin: 25px;
+    padding: 50px;
+}
+
+@keyframes mymove {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
