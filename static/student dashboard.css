@@ -1,0 +1,33 @@
+body{
+    margin: 12px;
+}
+.sidebar{
+    background-color: rgb(169, 108, 28);
+    font-size: 24px;
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+article{
+    padding-left: 25px;
+    padding-top: 50px;
+    border: 2px solid black;
+    text-align: left;
+    vertical-align:top;
+}
+article:hover{
+    border: 5px solid black;
+    cursor: pointer;
+}
+section{
+    height: 500px;
+    width: 1500px;
+    border: 5px solid black;
+    margin-left: 5px;
+    resize: both;
+}
+main{
+    display: flex;
+    flex-direction: row;
+}
