@@ -51,6 +51,7 @@ header {
     margin: 25px;
     padding: 50px;
     text-align: center;
+    background-color: aqua;
 }
 
 @keyframes mymove {
