@@ -33,6 +33,17 @@ def signup():
                               mobileNumber = mobile_number)
             db.session.add(student)
             db.session.commit()
+            # send email to user for successfully registration
+            sender_mail = "your email id"
+            password = "your app password"
+            message = f"""
+                   Hello {first_name + " " + last_name}
+                    Your registration successfully
+                    Thank you !
+                        """
+            with smtplib.SMTP_SSL("smtp.gmail.com") as server:
+                server.login(sender_mail,password)
+                server.sendmail(message)
     return render_template("Signup.html")
 if __name__ == "__main__":
     with app.app_context():
