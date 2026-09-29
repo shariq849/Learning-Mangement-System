@@ -34,7 +34,8 @@
         <div id="stuForm">
             <h2>Register as a Student</h2>
 
-            <form class="Form">
+            <form class="Form" method="POST" action="/Signup">
+                <input type="hidden" name="user" value="Student">
 
                 <div>
                     <label class="form-label">First Name</label>
@@ -43,19 +44,13 @@
                     <input class="form-control" type="text" id="lname" name="lname" placeholder="Enter First Name">
                 </div>
                 <div>
-                    <label class="form-label">Choose an option</label>
-                    <select class="form-select">
-                        {%for option in option%}
-                        <option>---Select your course</option>
-                        <option>Python Beginner Friendly Course</option>
-                        <option>Web Design principles</option>
-                    </select>
                     <label class="form-label">Email</label>
                     <input class="form-control" type="email" id="mail" name="mail" placeholder="Enter active email">
                 </div>
                 <div>
                     <label class="form-label">Mobile Number</label>
-                    <input class="form-control" type="tel" id="mobile" name="mobile">
+                    <input class="form-control" type="tel" id="mobile" name="mobile"
+                        placeholder="Enter the moblie number">
                 </div>
                 <button class="btn btn-primary" type="submit">Submit</button>
             </form>
@@ -70,17 +65,17 @@
 
                 <div>
                     <label class="form-label">First Name</label>
-                    <input class="form-control" type="text" id="fname" name="fname" placeholder="Enter First Name">
+                    <input class="form-control" type="text" id="ifname" name="ifname" placeholder="Enter First Name">
                     <label class="form-label">Last Name</label>
-                    <input class="form-control" type="text" id="lname" name="fname" placeholder="Enter First Name">`
+                    <input class="form-control" type="text" id="ilname" name="ifname" placeholder="Enter First Name">`
                 </div>
                 <div>
                     <label class="form-label">Email</label>
-                    <input class="form-control" type="email" id="mail" name="mail" placeholder="Enter active email">
+                    <input class="form-control" type="email" id="imail" name="imail" placeholder="Enter active email">
                 </div>
                 <div>
                     <label class="form-label">Mobile Number</label>
-                    <input class="form-control" type="tel" id="mobile" name="mobile">
+                    <input class="form-control" type="tel" id="imobile" name="imobile">
                 </div>
                 <button class="btn btn-primary" type="submit">Submit</button>
             </form>
