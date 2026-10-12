@@ -3,6 +3,8 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import Mapped,mapped_column,DeclarativeBase
 import enum
 import smtplib
+from email.message import Message
+
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///registerUsers.db'
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
@@ -33,17 +35,18 @@ def signup():
                               mobileNumber = mobile_number)
             db.session.add(student)
             db.session.commit()
+            message = Message()
             # send email to user for successfully registration
-            sender_mail = "your email id"
-            password = "your app password"
-            message = f"""
-                   Hello {first_name + " " + last_name}
-                    Your registration successfully
-                    Thank you !
-                        """
-            with smtplib.SMTP_SSL("smtp.gmail.com") as server:
-                server.login(sender_mail,password)
-                server.sendmail(message)
+            # sender_mail = "your email id"
+            # password = "your app password"
+            # message["From"] = sender_mail
+            # message["To"] = email
+            # message["Subjec"] = "Registration Successfull"
+
+            # message.set_content(f"""Hello {first_name + " " + last_name} Your registration successfully Thank you !""")
+            # with smtplib.SMTP_SSL("smtp.gmail.com",465) as server:
+            #     server.login(sender_mail,password)
+            #     server.sendmail(message)
     return render_template("Signup.html")
 if __name__ == "__main__":
     with app.app_context():
